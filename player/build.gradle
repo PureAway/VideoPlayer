@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "30.0.1"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -25,6 +25,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
+
 }
 
 dependencies {
@@ -34,7 +40,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
-    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
     implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
     implementation 'net.butterflytv.utils:rtmp-client:3.1.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
@@ -45,8 +50,8 @@ dependencies {
 publish {
     userOrg = 'zcy'
     groupId = 'com.zcy'
-    artifactId = 'nicetoast'
-    publishVersion = '1.1.8'
-    desc = 'A nice library for android to show toast'
-    website = 'https://github.com/PureAway/ToastProject'
+    artifactId = 'videoplayer'
+    publishVersion = '1.0.0'
+    desc = 'A nice library for android to play video'
+    website = 'https://github.com/PureAway/VideoPlayer'
 }

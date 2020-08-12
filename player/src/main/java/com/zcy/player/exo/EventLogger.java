@@ -4,7 +4,7 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.Surface;
 
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;

@@ -5,7 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ext.rtmp.RtmpDataSourceFactory;

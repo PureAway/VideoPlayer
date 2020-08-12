@@ -1,6 +1,6 @@
 package com.zcy.player.exo;
 
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;;
 
 import com.google.android.exoplayer2.upstream.HttpDataSource;
 import com.google.android.exoplayer2.upstream.HttpDataSource.BaseFactory;

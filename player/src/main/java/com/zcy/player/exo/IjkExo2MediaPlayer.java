@@ -8,8 +8,8 @@ import android.os.Looper;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.Size;
+import android.support.annotation.Nullable;;
+import android.support.annotation.Size;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultLoadControl;

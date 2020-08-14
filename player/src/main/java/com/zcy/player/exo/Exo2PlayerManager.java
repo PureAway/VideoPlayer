@@ -7,18 +7,23 @@ import android.net.Uri;
 import android.os.Message;
 import android.view.Surface;
 
-import android.support.annotation.Nullable;;
+import android.support.annotation.Nullable;
 
-import com.google.android.exoplayer2.SeekParameters;
-import com.google.android.exoplayer2.video.DummySurface;
 import com.zcy.player.BasePlayerManager;
 import com.zcy.player.cache.ICacheManager;
+import com.zcy.player.exoplayer2.SeekParameters;
+import com.zcy.player.exoplayer2.video.DummySurface;
 import com.zcy.player.model.Model;
 import com.zcy.player.model.VideoOptionModel;
 
 import java.util.List;
 
 import tv.danmaku.ijk.media.player.IMediaPlayer;
+
+/**
+ * EXOPlayer2
+ * Created by guoshuyu on 2018/1/11.
+ */
 
 public class Exo2PlayerManager extends BasePlayerManager {
 

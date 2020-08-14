@@ -3,6 +3,7 @@ package com.zcy.player.exo;
 import android.content.Context;
 import android.net.Uri;
 
+
 import com.zcy.player.cache.ICacheManager;
 
 import java.io.File;
@@ -10,6 +11,10 @@ import java.util.Map;
 
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 
+/**
+ * ExoPlayer专用
+ * Created by guoshuyu on 2018/5/21.
+ */
 
 public class ExoPlayerCacheManager implements ICacheManager {
 

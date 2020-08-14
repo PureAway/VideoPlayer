@@ -1,9 +1,14 @@
 package com.zcy.player.exo;
 
-import com.google.android.exoplayer2.source.MediaSource;
+import com.zcy.player.exoplayer2.source.MediaSource;
 
 import java.io.File;
 
+/**
+ * 设置 ExoPlayer 的 MediaSource 创建拦截
+ * Created by guoshuyu
+ * Date: 2018-08-22
+ */
 public interface ExoMediaSourceInterceptListener {
     /**
      * @param dataSource  链接

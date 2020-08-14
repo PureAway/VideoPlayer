@@ -5,32 +5,32 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.annotation.Nullable;
+import android.support.annotation.Size;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 
-import android.support.annotation.Nullable;;
-import android.support.annotation.Size;
-
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.DefaultLoadControl;
-import com.google.android.exoplayer2.DefaultRenderersFactory;
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.Format;
-import com.google.android.exoplayer2.LoadControl;
-import com.google.android.exoplayer2.PlaybackParameters;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.SeekParameters;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.analytics.AnalyticsListener;
-import com.google.android.exoplayer2.decoder.DecoderCounters;
-import com.google.android.exoplayer2.metadata.Metadata;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.MediaSourceEventListener;
-import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.trackselection.MappingTrackSelector;
-import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
+import com.zcy.player.exo.demo.EventLogger;
+import com.zcy.player.exoplayer2.C;
+import com.zcy.player.exoplayer2.DefaultLoadControl;
+import com.zcy.player.exoplayer2.DefaultRenderersFactory;
+import com.zcy.player.exoplayer2.ExoPlaybackException;
+import com.zcy.player.exoplayer2.Format;
+import com.zcy.player.exoplayer2.LoadControl;
+import com.zcy.player.exoplayer2.PlaybackParameters;
+import com.zcy.player.exoplayer2.Player;
+import com.zcy.player.exoplayer2.SeekParameters;
+import com.zcy.player.exoplayer2.SimpleExoPlayer;
+import com.zcy.player.exoplayer2.Timeline;
+import com.zcy.player.exoplayer2.analytics.AnalyticsListener;
+import com.zcy.player.exoplayer2.decoder.DecoderCounters;
+import com.zcy.player.exoplayer2.metadata.Metadata;
+import com.zcy.player.exoplayer2.source.MediaSource;
+import com.zcy.player.exoplayer2.source.MediaSourceEventListener;
+import com.zcy.player.exoplayer2.source.TrackGroupArray;
+import com.zcy.player.exoplayer2.trackselection.DefaultTrackSelector;
+import com.zcy.player.exoplayer2.trackselection.MappingTrackSelector;
+import com.zcy.player.exoplayer2.trackselection.TrackSelectionArray;
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -43,7 +43,13 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.MediaInfo;
 import tv.danmaku.ijk.media.player.misc.IjkTrackInfo;
 
+
+/**
+ * Created by guoshuyu on 2018/1/10.
+ * Exo
+ */
 public class IjkExo2MediaPlayer extends AbstractMediaPlayer implements Player.EventListener, AnalyticsListener {
+
 
     public static int ON_POSITION_DISCOUNTINUITY = 2702;
 

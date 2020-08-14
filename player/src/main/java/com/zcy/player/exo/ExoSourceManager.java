@@ -5,38 +5,45 @@ import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import android.support.annotation.Nullable;;
+import android.support.annotation.Nullable;
 
-import com.google.android.exoplayer2.C;
-import com.google.android.exoplayer2.ext.rtmp.RtmpDataSourceFactory;
-import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
-import com.google.android.exoplayer2.source.LoopingMediaSource;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.ProgressiveMediaSource;
-import com.google.android.exoplayer2.source.dash.DashMediaSource;
-import com.google.android.exoplayer2.source.dash.DefaultDashChunkSource;
-import com.google.android.exoplayer2.source.hls.HlsMediaSource;
-import com.google.android.exoplayer2.source.smoothstreaming.DefaultSsChunkSource;
-import com.google.android.exoplayer2.source.smoothstreaming.SsMediaSource;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
-import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
-import com.google.android.exoplayer2.upstream.RawResourceDataSource;
-import com.google.android.exoplayer2.upstream.cache.Cache;
-import com.google.android.exoplayer2.upstream.cache.CacheDataSource;
-import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory;
-import com.google.android.exoplayer2.upstream.cache.CacheSpan;
-import com.google.android.exoplayer2.upstream.cache.CacheUtil;
-import com.google.android.exoplayer2.upstream.cache.ContentMetadata;
-import com.google.android.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvictor;
-import com.google.android.exoplayer2.upstream.cache.SimpleCache;
-import com.google.android.exoplayer2.util.Util;
+import com.zcy.player.exo.source.DefaultHttpDataSource;
+import com.zcy.player.exo.source.ExoHttpDataSourceFactory;
+import com.zcy.player.exoplayer2.C;
+import com.zcy.player.exoplayer2.ext.rtmp.RtmpDataSourceFactory;
+import com.zcy.player.exoplayer2.extractor.DefaultExtractorsFactory;
+import com.zcy.player.exoplayer2.source.LoopingMediaSource;
+import com.zcy.player.exoplayer2.source.MediaSource;
+import com.zcy.player.exoplayer2.source.ProgressiveMediaSource;
+import com.zcy.player.exoplayer2.source.dash.DashMediaSource;
+import com.zcy.player.exoplayer2.source.dash.DefaultDashChunkSource;
+import com.zcy.player.exoplayer2.source.hls.HlsMediaSource;
+import com.zcy.player.exoplayer2.source.smoothstreaming.DefaultSsChunkSource;
+import com.zcy.player.exoplayer2.source.smoothstreaming.SsMediaSource;
+import com.zcy.player.exoplayer2.upstream.DataSource;
+import com.zcy.player.exoplayer2.upstream.DataSpec;
+import com.zcy.player.exoplayer2.upstream.DefaultBandwidthMeter;
+import com.zcy.player.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.zcy.player.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.zcy.player.exoplayer2.upstream.RawResourceDataSource;
+import com.zcy.player.exoplayer2.upstream.cache.Cache;
+import com.zcy.player.exoplayer2.upstream.cache.CacheDataSource;
+import com.zcy.player.exoplayer2.upstream.cache.CacheDataSourceFactory;
+import com.zcy.player.exoplayer2.upstream.cache.CacheSpan;
+import com.zcy.player.exoplayer2.upstream.cache.CacheUtil;
+import com.zcy.player.exoplayer2.upstream.cache.ContentMetadata;
+import com.zcy.player.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvictor;
+import com.zcy.player.exoplayer2.upstream.cache.SimpleCache;
+import com.zcy.player.exoplayer2.util.Util;
 
 import java.io.File;
 import java.util.Map;
 import java.util.NavigableSet;
+
+
+/**
+ * Created by guoshuyu on 2018/5/18.
+ */
 
 public class ExoSourceManager {
 

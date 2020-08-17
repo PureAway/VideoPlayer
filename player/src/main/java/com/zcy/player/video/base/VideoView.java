@@ -522,7 +522,7 @@ public abstract class VideoView extends TextureRenderView implements MediaPlayer
      */
     @Override
     public void onVideoResume() {
-        onVideoResume(true);
+        onVideoResume(false);
     }
 
     /**
@@ -1102,7 +1102,7 @@ public abstract class VideoView extends TextureRenderView implements MediaPlayer
      */
     public void seekTo(long position) {
         try {
-            if (getVideoManager() != null && position > 0) {
+            if (getVideoManager() != null && position >= 0) {
                 getVideoManager().seekTo(position);
             }
         } catch (Exception e) {

@@ -187,7 +187,7 @@ public class DefaultVideoPlayer extends AbstractMediaPlayer implements IPlayer.M
         if (mInternalPlayer == null) {
             return;
         }
-        mInternalPlayer.releaseVideoSurface();
+        mInternalPlayer.reset();
         mInternalPlayer = null;
         mSurface = null;
         mDataSource = null;

@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         videoPlayer.setUp(list, true, "测试视频");
 
+
         //增加封面
         ImageView imageView = new ImageView(this);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
         //设置返回键
         videoPlayer.getBackButton().setVisibility(View.VISIBLE);
+
+        videoPlayer.startPlayLogic();
 
         //设置旋转
         orientationUtils = new OrientationUtils(this, videoPlayer);

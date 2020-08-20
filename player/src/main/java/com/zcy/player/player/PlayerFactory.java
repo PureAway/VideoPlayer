@@ -27,4 +27,8 @@ public class PlayerFactory {
         return null;
     }
 
+    public static void debug(boolean debug) {
+        getPlayManager().debug(debug);
+    }
+
 }

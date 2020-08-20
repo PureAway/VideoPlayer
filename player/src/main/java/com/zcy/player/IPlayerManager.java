@@ -20,6 +20,13 @@ public interface IPlayerManager {
     IMediaPlayer getMediaPlayer();
 
     /**
+     * 是否需要调试
+     *
+     * @param debug
+     */
+    void debug(boolean debug);
+
+    /**
      * 初始化播放内核
      *
      * @param message         播放器所需初始化内容

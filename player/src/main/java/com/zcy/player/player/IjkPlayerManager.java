@@ -9,6 +9,7 @@ import android.os.Message;
 import android.os.ParcelFileDescriptor;
 import android.text.TextUtils;
 import android.view.Surface;
+
 import com.zcy.player.BasePlayerManager;
 import com.zcy.player.cache.ICacheManager;
 import com.zcy.player.model.Model;
@@ -49,6 +50,13 @@ public class IjkPlayerManager extends BasePlayerManager {
     @Override
     public IMediaPlayer getMediaPlayer() {
         return mediaPlayer;
+    }
+
+    @Override
+    public void debug(boolean debug) {
+        if (null != mediaPlayer) {
+            mediaPlayer.setLogEnabled(debug);
+        }
     }
 
     @Override

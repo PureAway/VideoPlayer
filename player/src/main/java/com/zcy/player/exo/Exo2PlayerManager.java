@@ -45,6 +45,13 @@ public class Exo2PlayerManager extends BasePlayerManager {
     }
 
     @Override
+    public void debug(boolean debug) {
+        if (null != mediaPlayer) {
+            mediaPlayer.setLogEnabled(debug);
+        }
+    }
+
+    @Override
     public void initVideoPlayer(Context context, Message msg, List<VideoOptionModel> optionModelList, ICacheManager cacheManager) {
         this.context = context.getApplicationContext();
         mediaPlayer = new IjkExo2MediaPlayer(context);

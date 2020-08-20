@@ -50,7 +50,7 @@ publish {
     userOrg = 'zcy'
     groupId = 'com.zcy'
     artifactId = 'videoplayer'
-    publishVersion = '1.0.6'
+    publishVersion = '1.0.9'
     desc = 'A nice library for android to play video'
     website = 'https://github.com/PureAway/VideoPlayer'
 }

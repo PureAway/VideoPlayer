@@ -47,6 +47,13 @@ public class SystemPlayerManager extends BasePlayerManager {
     }
 
     @Override
+    public void debug(boolean debug) {
+        if (null != mediaPlayer) {
+            mediaPlayer.setLogEnabled(debug);
+        }
+    }
+
+    @Override
     public void initVideoPlayer(Context context, Message message, List<VideoOptionModel> optionModelList, ICacheManager cacheManager) {
         this.context = context.getApplicationContext();
         mediaPlayer = new AndroidMediaPlayer();

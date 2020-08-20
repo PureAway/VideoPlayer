@@ -2,10 +2,10 @@ package com.zcy.player.cache;
 
 import android.content.Context;
 
+import com.zcy.player.IMediaPlayer;
+
 import java.io.File;
 import java.util.Map;
-
-import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 /**
  * 缓存管理接口

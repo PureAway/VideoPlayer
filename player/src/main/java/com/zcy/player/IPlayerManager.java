@@ -9,8 +9,6 @@ import com.zcy.player.model.VideoOptionModel;
 
 import java.util.List;
 
-import tv.danmaku.ijk.media.player.IMediaPlayer;
-
 /**
  * 播放器差异管理接口
  */

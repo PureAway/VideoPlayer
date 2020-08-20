@@ -674,7 +674,7 @@ public abstract class VideoView extends TextureRenderView implements MediaPlayer
     }
 
     @Override
-    public void onError(int what, int extra) {
+    public void onError(int what, String extra) {
 
         if (mNetChanged) {
             mNetChanged = false;

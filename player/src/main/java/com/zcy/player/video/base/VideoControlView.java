@@ -291,7 +291,7 @@ public abstract class VideoControlView extends VideoView implements View.OnClick
     }
 
     @Override
-    public void onError(int what, int extra) {
+    public void onError(int what, String extra) {
         super.onError(what, extra);
         if (mLockCurScreen) {
             lockTouchLogic();

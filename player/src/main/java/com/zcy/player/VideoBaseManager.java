@@ -23,8 +23,6 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.Map;
 
-import tv.danmaku.ijk.media.player.IMediaPlayer;
-
 /**
  * 基类管理器
  * VideoViewBridge接口说明可以查阅VideoViewBridge类
@@ -296,7 +294,7 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
     }
 
     @Override
-    public boolean onError(IMediaPlayer mp, final int what, final int extra) {
+    public boolean onError(IMediaPlayer mp, final int what, final String extra) {
         mainThreadHandler.post(new Runnable() {
             @Override
             public void run() {
@@ -651,7 +649,7 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
         public void run() {
             if (listener != null) {
                 Debuger.printfError("time out for error listener");
-                listener().onError(BUFFER_TIME_OUT_ERROR, BUFFER_TIME_OUT_ERROR);
+                listener().onError(BUFFER_TIME_OUT_ERROR, "buffer time out error");
             }
         }
     };

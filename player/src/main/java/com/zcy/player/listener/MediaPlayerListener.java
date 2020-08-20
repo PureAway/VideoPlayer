@@ -11,7 +11,7 @@ public interface MediaPlayerListener {
 
     void onSeekComplete();
 
-    void onError(int what, int extra);
+    void onError(int what, String extra);
 
     void onInfo(int what, int extra);
 

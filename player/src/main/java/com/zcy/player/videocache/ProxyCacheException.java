@@ -1,7 +1,6 @@
 package com.zcy.player.videocache;
 
-
-import tv.danmaku.ijk.media.player.BuildConfig;
+import com.zcy.player.BuildConfig;
 
 /**
  * Indicates any error in work of {@link ProxyCache}.

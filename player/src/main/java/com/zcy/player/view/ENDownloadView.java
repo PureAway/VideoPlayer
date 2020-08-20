@@ -18,10 +18,6 @@ import android.view.animation.OvershootInterpolator;
 import com.zcy.player.R;
 
 
-/**
- * Created by codeest on 2016/11/9.
- */
-
 public class ENDownloadView extends View {
 
     public static final int STATE_PRE = 0;

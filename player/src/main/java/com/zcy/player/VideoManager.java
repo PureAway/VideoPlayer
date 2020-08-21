@@ -3,6 +3,7 @@ package com.zcy.player;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -91,9 +92,6 @@ public class VideoManager extends VideoBaseManager {
      * 页面销毁了记得调用是否所有的video
      */
     public static void releaseAllVideos() {
-        if (VideoManager.instance().listener() != null) {
-            VideoManager.instance().listener().onCompletion();
-        }
         VideoManager.instance().releaseMediaPlayer();
     }
 

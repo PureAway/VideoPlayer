@@ -58,6 +58,8 @@ public interface IPlayerManager {
      */
     void release();
 
+    void surfaceChanged();
+
     /**
      * 缓存进度
      */

@@ -41,7 +41,9 @@ public class DefaultVideoPlayer extends AbstractMediaPlayer implements IPlayer.M
     @Override
     public void setDisplay(SurfaceHolder surfaceHolder) {
         if (surfaceHolder == null) {
-            setSurface(null);
+            if (null != mInternalPlayer) {
+                mInternalPlayer.releaseVideoSurface();
+            }
         } else {
             setSurface(surfaceHolder.getSurface());
         }
@@ -136,6 +138,14 @@ public class DefaultVideoPlayer extends AbstractMediaPlayer implements IPlayer.M
     }
 
     @Override
+    public void surfaceChanged() throws IllegalStateException {
+        if (mInternalPlayer == null) {
+            return;
+        }
+        mInternalPlayer.setSurfaceChanged();
+    }
+
+    @Override
     public void setScreenOnWhilePlaying(boolean b) {
 
     }
@@ -187,7 +197,7 @@ public class DefaultVideoPlayer extends AbstractMediaPlayer implements IPlayer.M
         if (mInternalPlayer == null) {
             return;
         }
-        mInternalPlayer.reset();
+        mInternalPlayer.stop();
         mInternalPlayer = null;
         mSurface = null;
         mDataSource = null;
@@ -211,7 +221,7 @@ public class DefaultVideoPlayer extends AbstractMediaPlayer implements IPlayer.M
     @Override
     public void setVolume(float leftVolume, float rightVolume) {
         if (mInternalPlayer != null) {
-            mInternalPlayer.setVolume((int) (leftVolume + rightVolume) / 2);
+            mInternalPlayer.setVolume((int) leftVolume);
         }
     }
 
@@ -280,9 +290,6 @@ public class DefaultVideoPlayer extends AbstractMediaPlayer implements IPlayer.M
     public void setSurface(Surface surface) {
         mSurface = surface;
         if (mInternalPlayer != null) {
-            if (surface != null && !surface.isValid()) {
-                mSurface = null;
-            }
             mInternalPlayer.setVideoSurface(surface);
         }
     }

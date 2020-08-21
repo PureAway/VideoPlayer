@@ -8,6 +8,8 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Surface;
+import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -31,7 +33,6 @@ import java.io.File;
 
 /**
  * 标准播放器，继承之后实现一些ui显示效果，如显示／隐藏ui，播放按键等
- * Created by shuyu on 2016/11/11.
  */
 
 public class StandardVideoPlayer extends VideoPlayer {
@@ -90,6 +91,11 @@ public class StandardVideoPlayer extends VideoPlayer {
 
     public StandardVideoPlayer(Context context, AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    @Override
+    protected void surfaceChanged(Surface surface) {
+
     }
 
     @Override

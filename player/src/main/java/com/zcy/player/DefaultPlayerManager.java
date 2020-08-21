@@ -121,6 +121,14 @@ public class DefaultPlayerManager extends BasePlayerManager {
     }
 
     @Override
+    public void surfaceChanged() {
+        if (mediaPlayer != null) {
+            mediaPlayer.surfaceChanged();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
     public int getBufferedPercentage() {
         return -1;
     }

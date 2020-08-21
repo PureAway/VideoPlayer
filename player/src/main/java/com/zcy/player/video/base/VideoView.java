@@ -736,6 +736,11 @@ public abstract class VideoView extends TextureRenderView implements MediaPlayer
     }
 
     @Override
+    protected void surfaceChanged(Surface surface) {
+        getVideoManager().surfaceChanged(surface);
+    }
+
+    @Override
     protected void releaseSurface(Surface surface) {
         getVideoManager().releaseSurface(surface);
     }

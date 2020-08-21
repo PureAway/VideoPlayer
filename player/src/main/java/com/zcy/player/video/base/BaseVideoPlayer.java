@@ -36,7 +36,6 @@ import static com.zcy.player.utils.CommonUtil.showSupportActionBar;
 
 /**
  * 处理全屏和小屏幕逻辑
- * Created by shuyu on 2016/11/17.
  */
 
 public abstract class BaseVideoPlayer extends VideoControlView {

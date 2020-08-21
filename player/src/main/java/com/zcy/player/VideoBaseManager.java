@@ -42,6 +42,8 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
 
     protected static final int HANDLER_RELEASE_SURFACE = 3;
 
+    protected static final int HANDLER_SURFACE_CHANGE = 4;
+
     protected static final int BUFFER_TIME_OUT_ERROR = -192;//外部超时错误码
 
     protected Context context;
@@ -220,6 +222,13 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
         sendMessage(msg);
         playTag = "";
         playPosition = -22;
+    }
+
+    @Override
+    public void surfaceChanged(Surface holder) {
+        Message msg = new Message();
+        msg.what = HANDLER_SURFACE_CHANGE;
+        sendMessage(msg);
     }
 
     @Override
@@ -579,6 +588,12 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
                     break;
                 case HANDLER_RELEASE_SURFACE:
                     releaseSurface(msg);
+                    break;
+                case HANDLER_SURFACE_CHANGE:
+                    if (playerManager != null) {
+                        playerManager.surfaceChanged();
+                    }
+                default:
                     break;
             }
         }

@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * 列表播放支持
- * Created by shuyu on 2016/12/20.
  */
 
 public class ListVideoPlayer extends StandardVideoPlayer {

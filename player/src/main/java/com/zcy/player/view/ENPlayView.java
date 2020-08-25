@@ -17,6 +17,7 @@ import android.view.animation.AnticipateInterpolator;
 
 import com.zcy.player.R;
 
+
 public class ENPlayView extends View {
 
     public static int STATE_PLAY = 0;

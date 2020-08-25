@@ -87,8 +87,6 @@ public interface VideoViewBridge {
      */
     void setDisplay(Surface holder);
 
-    void surfaceChanged(Surface holder);
-
     void releaseSurface(Surface surface);
 
     int getLastState();

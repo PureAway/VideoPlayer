@@ -674,7 +674,7 @@ public abstract class VideoView extends TextureRenderView implements MediaPlayer
     }
 
     @Override
-    public void onError(int what, String extra) {
+    public void onError(int what, int extra) {
 
         if (mNetChanged) {
             mNetChanged = false;
@@ -733,11 +733,6 @@ public abstract class VideoView extends TextureRenderView implements MediaPlayer
     @Override
     protected void setDisplay(Surface surface) {
         getVideoManager().setDisplay(surface);
-    }
-
-    @Override
-    protected void surfaceChanged(Surface surface) {
-        getVideoManager().surfaceChanged(surface);
     }
 
     @Override

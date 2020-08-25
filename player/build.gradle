@@ -28,7 +28,11 @@ android {
     lintOptions {
         abortOnError false
     }
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 
 }
 
@@ -48,7 +52,7 @@ publish {
     userOrg = 'zcy'
     groupId = 'com.zcy'
     artifactId = 'videoplayer'
-    publishVersion = '1.1.4'
+    publishVersion = '1.1.8'
     desc = 'A nice library for android to play video'
     website = 'https://github.com/PureAway/VideoPlayer'
 }

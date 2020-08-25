@@ -9,6 +9,8 @@ import com.zcy.player.model.VideoOptionModel;
 
 import java.util.List;
 
+import tv.danmaku.ijk.media.player.IMediaPlayer;
+
 /**
  * 播放器差异管理接口
  */
@@ -16,13 +18,6 @@ import java.util.List;
 public interface IPlayerManager {
 
     IMediaPlayer getMediaPlayer();
-
-    /**
-     * 是否需要调试
-     *
-     * @param debug
-     */
-    void debug(boolean debug);
 
     /**
      * 初始化播放内核
@@ -57,8 +52,6 @@ public interface IPlayerManager {
      * 释放内核
      */
     void release();
-
-    void surfaceChanged();
 
     /**
      * 缓存进度

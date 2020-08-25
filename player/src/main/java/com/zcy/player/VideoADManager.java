@@ -16,7 +16,6 @@ import static com.zcy.player.utils.CommonUtil.hideNavKey;
 
 /**
  * 视频管理，单例
- * Created by shuyu on 2018/01/26.
  */
 
 public class VideoADManager extends VideoBaseManager {

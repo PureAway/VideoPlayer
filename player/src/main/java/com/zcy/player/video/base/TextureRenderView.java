@@ -7,7 +7,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.Surface;
-import android.view.SurfaceHolder;
 import android.view.TextureView;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -76,7 +75,7 @@ public abstract class TextureRenderView extends FrameLayout implements ISurfaceL
 
     @Override
     public void onSurfaceSizeChanged(Surface surface, int width, int height) {
-        surfaceChanged(surface);
+
     }
 
     @Override
@@ -229,7 +228,5 @@ public abstract class TextureRenderView extends FrameLayout implements ISurfaceL
 
     //释放
     protected abstract void releaseSurface(Surface surface);
-
-    protected abstract void surfaceChanged(Surface surface);
 
 }

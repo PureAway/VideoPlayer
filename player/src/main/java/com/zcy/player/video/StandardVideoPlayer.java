@@ -8,8 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Surface;
-import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -91,11 +89,6 @@ public class StandardVideoPlayer extends VideoPlayer {
 
     public StandardVideoPlayer(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    @Override
-    protected void surfaceChanged(Surface surface) {
-
     }
 
     @Override

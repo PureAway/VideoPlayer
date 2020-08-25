@@ -23,6 +23,8 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.Map;
 
+import tv.danmaku.ijk.media.player.IMediaPlayer;
+
 /**
  * 基类管理器
  * VideoViewBridge接口说明可以查阅VideoViewBridge类
@@ -41,8 +43,6 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
     protected static final int HANDLER_RELEASE = 2;
 
     protected static final int HANDLER_RELEASE_SURFACE = 3;
-
-    protected static final int HANDLER_SURFACE_CHANGE = 4;
 
     protected static final int BUFFER_TIME_OUT_ERROR = -192;//外部超时错误码
 
@@ -225,13 +225,6 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
     }
 
     @Override
-    public void surfaceChanged(Surface holder) {
-        Message msg = new Message();
-        msg.what = HANDLER_SURFACE_CHANGE;
-        sendMessage(msg);
-    }
-
-    @Override
     public void setDisplay(Surface holder) {
         Message msg = new Message();
         msg.what = HANDLER_SETDISPLAY;
@@ -303,7 +296,7 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
     }
 
     @Override
-    public boolean onError(IMediaPlayer mp, final int what, final String extra) {
+    public boolean onError(IMediaPlayer mp, final int what, final int extra) {
         mainThreadHandler.post(new Runnable() {
             @Override
             public void run() {
@@ -589,12 +582,6 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
                 case HANDLER_RELEASE_SURFACE:
                     releaseSurface(msg);
                     break;
-                case HANDLER_SURFACE_CHANGE:
-                    if (playerManager != null) {
-                        playerManager.surfaceChanged();
-                    }
-                default:
-                    break;
             }
         }
 
@@ -664,7 +651,7 @@ public abstract class VideoBaseManager implements IMediaPlayer.OnPreparedListene
         public void run() {
             if (listener != null) {
                 Debuger.printfError("time out for error listener");
-                listener().onError(BUFFER_TIME_OUT_ERROR, "buffer time out error");
+                listener().onError(BUFFER_TIME_OUT_ERROR, BUFFER_TIME_OUT_ERROR);
             }
         }
     };

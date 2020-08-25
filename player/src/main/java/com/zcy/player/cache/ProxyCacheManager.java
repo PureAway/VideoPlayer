@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
 
-import com.zcy.player.IMediaPlayer;
 import com.zcy.player.utils.CommonUtil;
 import com.zcy.player.utils.FileUtils;
 import com.zcy.player.utils.StorageUtils;
@@ -17,6 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 /**
  * 代理缓存管理器

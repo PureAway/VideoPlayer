@@ -1,6 +1,5 @@
 package com.zcy.player.player;
 
-import com.zcy.player.DefaultPlayerManager;
 import com.zcy.player.IPlayerManager;
 
 /**
@@ -16,7 +15,7 @@ public class PlayerFactory {
 
     public static IPlayerManager getPlayManager() {
         if (sPlayerManager == null) {
-            sPlayerManager = DefaultPlayerManager.class;
+            sPlayerManager = IjkPlayerManager.class;
         }
         try {
             return sPlayerManager.newInstance();
@@ -26,10 +25,6 @@ public class PlayerFactory {
             e.printStackTrace();
         }
         return null;
-    }
-
-    public static void debug(boolean debug) {
-        getPlayManager().debug(debug);
     }
 
 }

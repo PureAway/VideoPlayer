@@ -3,7 +3,6 @@ package com.zcy.player.videocache;
 /**
  * Source for proxy.
  *
- * @author Alexey Danilov (danikula@gmail.com).
  */
 public interface Source {
 
